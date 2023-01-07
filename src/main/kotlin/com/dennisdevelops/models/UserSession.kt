@@ -1,5 +1,6 @@
-package com.dennisdevelops.model
+package com.dennisdevelops.models
 
 import io.ktor.server.auth.*
 
-data class UserSession(val userId: String, val username: String, val email: String, val token: String) : Principal
+// The user is registerd by an email as username and password
+data class UserSession(val sessionId: Int,val userId: Int, val username:String?) : Principal
